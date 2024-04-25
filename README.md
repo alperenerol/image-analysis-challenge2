@@ -19,7 +19,13 @@ docker run -p 5002:5002 flask-img
 ## Usage
 Submit depth_min, depth_max processing:
 
-curl "http://localhost:5002/get_images?depth_min=9200.1&depth_max=9210.0"
+curl "http://localhost:5002/get_images?depth_min=9300.1&depth_max=9301.0"
+
+Outputs: base64 string for generated frame, saves image to disk
+
+# Utils functions for encoding and decoding
+pil_image_to_b64_str
+base64_to_pilimage
 
 # Example Generated Frame Display
 python test.py 
